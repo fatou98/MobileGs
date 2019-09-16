@@ -1,0 +1,7 @@
+{
+  "appId": "sn.sentailor",
+  "appName": "interfaces",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

@@ -1,0 +1,189 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/tabs/clients"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ client.prenom }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="isLoading" text-center>
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+  <ion-grid *ngIf="!isLoading">
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-img [src]="client.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-text>{{client.prenom}} {{client.nom}}</ion-text>
+          <ion-icon name="contact" slot="start"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-text>{{client.adresse}}</ion-text>
+          <ion-icon name="pin" slot="start"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-text>{{client.email}}</ion-text>
+          <ion-icon name="mail" slot="start"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-text>{{client.telephone}}</ion-text>
+          <ion-icon name="call" slot="start"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col text-center>
+        Mesures
+      </ion-col>
+    </ion-row>
+    
+    <!-- separate -->
+    <ion-row>
+      <!-- mesure Epaule -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked"> Epaule</ion-label>
+          <ion-text>{{client.mesures[0]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Col -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Col</ion-label>
+          <ion-text>{{client.mesures[1]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Longueur Manches -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Manche</ion-label>
+          <ion-text>{{client.mesures[2]}}</ion-text>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <!-- mesure Longueur Tenue (Haut) -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Longueur Boubou (Haut)</ion-label>
+          <ion-text>{{client.mesures[3]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Poitrine -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Poitrine</ion-label>
+          <ion-text>{{client.mesures[4]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      
+    </ion-row>
+    
+    <ion-row>
+      <!-- mesure Tour de ventre -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Tour de ventre</ion-label>
+          <ion-text>{{client.mesures[5]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Tour de Bras -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Tour de bras</ion-label>
+          <ion-text>{{client.mesures[6]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      
+    </ion-row>
+    
+    <ion-row>
+      <!-- mesure ceinture -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Ceinture</ion-label>
+          <ion-text>{{client.mesures[7]}}</ion-text>
+        </ion-item>
+      </ion-col >
+      <!-- mesure Bassin -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Bassin</ion-label>
+          <ion-text>{{client.mesures[8]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      
+    </ion-row>
+    
+    <ion-row>
+      <!-- mesure Longueur Genou -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Longueur Genou</ion-label>
+          <ion-text>{{client.mesures[9]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Tour de Genou -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Tour de genou</ion-label>
+          <ion-text>{{client.mesures[10]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      
+    </ion-row>
+    
+    <ion-row>
+      <!-- mesure Bas -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Bas</ion-label>
+          <ion-text>{{client.mesures[11]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Longueur Pantalon -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Longueur Pantalon</ion-label>
+          <ion-text>{{client.mesures[12]}}</ion-text>
+        </ion-item>
+      </ion-col>
+      <!-- mesure Tour de Cuisse -->
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Tour de cuisse</ion-label>
+          <ion-text>{{client.mesures[13]}}</ion-text>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid><br>
+  
+  <ion-button size="3" size-sm="3" offset-sm="3" color="primary" >Créer commande pour ce client</ion-button>
+  <br><br>
+  <ion-footer text-center>
+ 
+      <p>crée le {{client.createdAt | date}}</p>
+      <p>dernière modification {{client.modifiedAt | date}}</p>
+   
+  </ion-footer>
+</ion-content>

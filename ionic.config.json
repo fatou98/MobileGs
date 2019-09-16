@@ -1,5 +1,7 @@
 {
   "name": "interfaces",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
