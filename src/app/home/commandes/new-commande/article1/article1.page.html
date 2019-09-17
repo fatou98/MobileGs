@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/tabs/clients"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouvelle commande {{ client.prenom }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="isLoading" text-center>
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+  <ion-grid *ngIf="!isLoading">
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-img [src]="client.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-text>{{client.prenom}} {{client.nom}}</ion-text>
+          <ion-icon name="contact" slot="start"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-text>{{client.telephone}}</ion-text>
+          <ion-icon name="call" slot="start"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <br>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Article 1</ion-card-subtitle>
+      </ion-card-header>
+      
+      <ion-item>
+        <ion-icon name="pricetag" slot="start"></ion-icon>
+        <ion-label>Prix: 45000 fcfa</ion-label>
+      </ion-item>
+      
+      <ion-item >
+        <ion-label>Quantité: 1</ion-label>
+      </ion-item>
+      
+      <ion-item >
+        <ion-thumbnail>
+          <ion-img src="assets\modeles-et-tissus\getzner.jpg"></ion-img>
+        </ion-thumbnail>         
+        <ion-label> Tissu: getzner</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-thumbnail>
+          <ion-img src="assets\modeles-et-tissus\sabador.jpg"></ion-img>
+        </ion-thumbnail>        
+        <ion-label>Modèle: sabador</ion-label>
+      </ion-item>
+      
+      
+      <div class="ion-text-center">
+        
+        <ion-button color="success"  size="default" shape="round" fill="clear">
+          <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+        </ion-button>
+        
+        <ion-button color="warning"  size="default" shape="round" fill="clear">
+          <ion-icon name="create" slot="icon-only"></ion-icon>
+        </ion-button>
+        
+        <ion-button color="danger"  size="default" shape="round" fill="clear">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      
+    </ion-card>
+    
+  </ion-grid><br>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-icon name="pricetag" slot="start"></ion-icon>
+          <ion-label>Total: 45000 fcfa</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Montant Avance:</ion-label>
+          <ion-input type="number" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Reste à payer:</ion-label>
+          <ion-input type="number" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Date retrait/livraison:</ion-label>
+          <ion-datetime></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-button 
+  expand="block"
+  color="secondary"
+  [routerLink]="['/home','tabs','commandes','new','new-article2',client.id]" >
+  Créer article
+</ion-button>
+
+<ion-button 
+expand="block"
+color="tertiary"
+>
+Enregistrer commande
+</ion-button>
+
+
+
+</ion-content>

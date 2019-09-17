@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Commandes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+  <ion-segment (ionChange)="onFilterUpdate($event)">
+    <ion-segment-button value="encours">En Cours</ion-segment-button>
+    <ion-segment-button value="terminees" checked>Terminées</ion-segment-button>
+  </ion-segment>
+  <ion-searchbar></ion-searchbar>
+ 
+  
+    <ion-grid>
+
+    <ion-row>
+        <ion-col *ngIf="this.archived === false" size-md="6" offset-md="3" text-center>
+         
+            <ion-item-sliding  
+            [routerLink]="['/','home','tabs','fake-commandes', 'termine-details', client.id]" 
+            #slidingItem>
+              <ion-item detail>
+              <ion-text color="success" slot="end">terminée</ion-text>
+              <ion-label>
+                <h3><b>{{client.prenom}} {{client.nom}}</b></h3>
+                <span><b>{{client.telephone}}</b></span>
+              </ion-label>
+            </ion-item>
+            
+            <ion-item-options>
+              <ion-item-option color="dark"  (click) = "archive()">
+                <ion-icon name="archive" slot="icon-only"></ion-icon>
+              </ion-item-option>
+              
+            </ion-item-options>
+          </ion-item-sliding>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
+  

@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home/tabs/commandes/new/article1/client.id"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Nouvel article </ion-title>
+      <ion-buttons slot="primary">
+          <ion-button [routerLink]="['/home','tabs','commandes','new','article2',client.id]">
+            <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form >
+      
+      <ion-grid>
+        
+        <ion-row>
+          
+          <ion-col size-sm="6" offset-sm="3">
+            <ion-item>
+              <ion-label position="floating">Type de tissu</ion-label>
+              <ion-input type="text" ></ion-input>
+            </ion-item><br>
+            
+            <app-image-picker
+            [showPreview]="form.get('image').value"
+            (imagePick)="onImagePicked($event)">
+          </app-image-picker>    
+     
+            <ion-item>
+              <ion-label position="floating">Modèle</ion-label>
+              <ion-input type="text" ></ion-input>
+            </ion-item><br>
+            
+            <app-image-picker
+            [showPreview]="form.get('image').value"
+            (imagePick)="onImagePicked($event)">
+          </app-image-picker>
+  
+            <ion-item>
+              <ion-label position="floating">Prix</ion-label>
+              <ion-input type="number" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Quantité</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
+        
+        
+      </ion-grid>
+      
+    </form>
+  </ion-content>
+  

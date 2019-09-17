@@ -1,0 +1,186 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/home/tabs/clients"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouveau Client</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCreateClient()" [disabled]="!form.valid || !form.get('image').value">
+        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <form [formGroup]="form">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size-zm="6" offset-sm="3">
+          <app-image-picker
+            [showPreview]="form.get('image').value"
+           (imagePick)="onImagePicked($event)">
+          </app-image-picker>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Nom</ion-label>
+            <ion-input type="text" formControlName="nom"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Prenom</ion-label>
+            <ion-input type="text" formControlName="prenom"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Adresse</ion-label>
+            <ion-input type="text" formControlName="adresse"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">E-Mail</ion-label>
+            <ion-input type="email" formControlName="email" email></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Telephone</ion-label>
+            <ion-input type="text" formControlName="telephone"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+      <br>
+      
+      <ion-row>
+        <ion-col text-center>
+          Mesures
+        </ion-col>
+      </ion-row>
+      
+      <!-- separate -->
+      <ion-row>
+        <!-- mesure Epaule -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating"> Epaule</ion-label>
+            <ion-input type="number" formControlName="epaule"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Col -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Col</ion-label>
+            <ion-input type="number" formControlName="col"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Longueur Manches -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Manche</ion-label>
+            <ion-input type="number" formControlName="manche"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <!-- mesure Longueur Tenue (Haut) -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Longueur Boubou (Haut)</ion-label>
+            <ion-input type="number" formControlName="LongBoubou"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Poitrine -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Poitrine</ion-label>
+            <ion-input type="number" formControlName="poitrine"></ion-input>
+          </ion-item>
+        </ion-col>
+        
+      </ion-row>
+      
+      <ion-row>
+        <!-- mesure Tour de ventre -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Tour de ventre</ion-label>
+            <ion-input type="number" formControlName="tourVentre"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Tour de Bras -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Tour de bras</ion-label>
+            <ion-input type="number" formControlName="tourBras"></ion-input>
+          </ion-item>
+        </ion-col>
+        
+      </ion-row>
+      
+      <ion-row>
+        <!-- mesure ceinture -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Ceinture</ion-label>
+            <ion-input type="number" formControlName="ceinture"></ion-input>
+          </ion-item>
+        </ion-col >
+        <!-- mesure Bassin -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Bassin</ion-label>
+            <ion-input type="number" formControlName="bassin"></ion-input>
+          </ion-item>
+        </ion-col>
+        
+      </ion-row>
+      
+      <ion-row>
+        <!-- mesure Longueur Genou -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Longueur Genou</ion-label>
+            <ion-input type="number" formControlName="LongGenou"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Tour de Genou -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Tour de genou</ion-label>
+            <ion-input type="number" formControlName="tourGenou"></ion-input>
+          </ion-item>
+        </ion-col>
+        
+      </ion-row>
+      
+      <ion-row>
+        <!-- mesure Bas -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Bas</ion-label>
+            <ion-input type="number" formControlName="bas"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Longueur Pantalon -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Longueur Pantalon</ion-label>
+            <ion-input type="number" formControlName="LongPantalon"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- mesure Tour de Cuisse -->
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Tour de cuisse</ion-label>
+            <ion-input type="number" formControlName="tourCuisse"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+    
+  </form>
+  
+</ion-content>

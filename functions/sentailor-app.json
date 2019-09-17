@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gestionateliercouture",
+  "private_key_id": "f56af76378b7c69314e1a1fe4a5eb33fe358aad5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDdrhRS02+8jfIe\n/ERI4aNuHyditapv6Q2rLqLbOyrJYJ/kKHjYKQaHv+k4oYPtw6jozL4V/Itr4Vmt\n3Q7yWFMpgB4CgMNTefFTvyLWPpgQPBRCFfLb7SKgDScZv82PX+Rx/ODv7lPhepr7\nqajQpFiOjDo8nQM+sR+3bfyzQVvdga0jXX4J7ULEVnhBzIzcWGA8YAB7rGEwPk8D\ndL/phJ7mcbUBylfKDvP13oyE/akRNCCyRmmlIBp0V+5nZvtEtY6GffA+2/qJw/S9\nhVIsjto6NTzPRQ+ZtDMGHvJdCRA12r3NJ3cqEi/vjAfnRNK2m61Dq8ZRl8zafW22\nn0FvneFXAgMBAAECggEATa5iTdHs7liZd1U0QovbPswo+5SoeJXk5c8uX3+g0zeK\nYCP0kN7zfF96RQ+IUSnGx2lz1PWOD8xEpkH4KmFcJwdPvNXNXLO3Jv8sIIKHu+yp\ntqzFUV8MSqTBRmsph+v0/CK+2iUcfL9/jt/Zmd91buJhx/rHd9EOybL/ofsty3Uu\nBl1bTHcQvbrINFPI96zYdNpyceaxkKYfhQoTRgGnv+ZNu5YuHxw4ZB6/7LQDOCip\nEKIYKgyXOv6X/eBr/DvqIBL/164O3PFTuUyJo+RzA1jMaSjeXYvjCMHfAUOEHNCV\n81a86KlLxAcAB5QpjDyBwEwUr0imb+PcdJUxQwUO9QKBgQD52jTHPlNGkPG2UM0f\nlttdlonoySFd8mWVT981KDMrBab4zAVw0ZMMGXBJa4B7XhL3yOwDzuD4Pg9R6eIX\nYSR6eoNq2IsP4NeA8dNJQ0S+GH7AfLZ14c1I8GH4DYasFXHQW8GY1uTJRBRzjQwi\nhsCm9CGP4BRV93VdcoSdWKikXQKBgQDjImsdpvCle9a0XOnak0fkhqXLUDCrwUCy\n2BzA5suzXbkcLVfGWz0JJfNAtBWBWJf6/NB0Oe1duziThdMfWgjC5UekxAlyOGyn\nZmjTmGB6S0KogqGwj1Fm+0rpXYsan8fXs4a9GKtR9GwaVbRnTWlhKYY+loHYeWL2\n+UhfuMiBQwKBgQCO9e77Dkth9i+H7SXhbFUqcKeKXgNMmRTM4X3LEaxtcnd+pmZ6\njkAATVH1gKBsdoCN7RY2e5o4EHJ9oUCvtfLEbfNiIHM5a6KDcls98VKVHrjv9KwG\nOWRX1suHvl2Pe1m7KbVVeahBDUZSc6M84jO7k7bcdw/LvKMYDB2bVo5wNQKBgDNi\nE+1vWL13GIlRA65o5zixpUwrZfdVDrfm4Apbq/V13GydbV/4QASTy0X19299hVRI\nYTgJ6sLrmc711V8gVR8SE3UYzDJExX/RUSGdNSY1ZG0OsFlq8rVjX/0PJmrtfp4z\nhOW+cPNnYhVLEjbUcmSCqlX6YoGAZH0Ow+qzuNhVAoGBAIGp6odxTomuJNZe2HyM\n+oIbCKtBhGTV53DzuDwkO3bLqPjj84WBPV8x9mFq4fvSncbjyi/WcJnmDlYqbYP2\nZKAnvj1xmZ7Lo+TjoxdMVfr/8F1I4L3+nAaZ6fP0FFa8lU1gvaEeveZXx4d/Ekj5\nAsTqN7aFYhGINm485a/62UK9\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-gk5gv@gestionateliercouture.iam.gserviceaccount.com",
+  "client_id": "104906810366898271266",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-gk5gv%40gestionateliercouture.iam.gserviceaccount.com"
+}

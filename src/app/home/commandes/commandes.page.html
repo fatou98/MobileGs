@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Commandes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-segment (ionChange)="onFilterUpdate($event)">
+  <ion-segment-button value="encours" checked>En Cours</ion-segment-button>
+  <ion-segment-button value="terminees">Terminées</ion-segment-button>
+</ion-segment>
+<ion-grid *ngIf="!finishedCommandes || finishedCommandes.length <= 0">
+  <ion-row>
+    <ion-col>
+      <p>il n'y a pas de commandes  en ce moment ! </p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  <ion-grid *ngIf="finishedCommandes.length > 0">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" text-center>
+        
+        
+        <ion-virtual-scroll [items]="finishedCommandes">
+          <ion-item-sliding *virtualItem="let commande"  #slidingItem>
+            <ion-item [routerLink]="['/','home','tabs','commandes',commande.id]" 
+            routerLinkActive="router-link-active"
+            detail>
+            
+            <ion-thumbnail slot="end">
+              <ion-img [src]="commande.modelImageUrl"></ion-img>
+            </ion-thumbnail>
+            
+            <ion-label>
+              <h3>{{commande.prenomClient}} {{commande.nomClient}}</h3>
+              <span><b>{{commande.telClient}}</b></span>
+            </ion-label>
+          </ion-item>
+          
+          
+          <ion-item-options>
+            <ion-item-option color="secondary" (click)="onEdit(commande.id, slidingItem)">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-item-option>
+            
+            <ion-item-option color="danger" (click)="onDelete(commande.id, slidingItem)">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        </ion-virtual-scroll>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
