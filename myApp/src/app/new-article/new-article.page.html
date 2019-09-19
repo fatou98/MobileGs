@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/new-order"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouvel article Commande n°X</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form>
+    
+    <ion-grid>
+      
+      <ion-row>
+        
+        <ion-col>
+          
+          <ion-item>
+            <ion-label position="floating">Type de tissu</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item><br>
+          
+          <div class="image" text-center>
+            <ion-button color="tertiary" >Choisir une image</ion-button>
+          </div>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Modèle</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item><br>
+          
+          <div class="image" text-center>
+            <ion-button color="tertiary" >Choisir une image</ion-button>
+          </div>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Prix</ion-label>
+            <ion-input type="number"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Quantité</ion-label>
+            <ion-input type="number"></ion-input>
+          </ion-item>
+          <br>
+        </ion-col>
+      </ion-row>
+      
+      
+      
+    </ion-grid>
+    
+  </form>
+</ion-content>

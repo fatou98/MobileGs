@@ -12,6 +12,10 @@ const routes: Routes = [
   { path: 'new-customer', loadChildren: './new-customer/new-customer.module#NewCustomerPageModule' },
   { path: 'customer-detail', loadChildren: './customer-detail/customer-detail.module#CustomerDetailPageModule' },
   { path: 'new-order', loadChildren: './new-order/new-order.module#NewOrderPageModule' },
+  { path: 'order-detail', loadChildren: './order-detail/order-detail.module#OrderDetailPageModule' },
+  { path: 'new-article', loadChildren: './new-article/new-article.module#NewArticlePageModule' },
+
+
 ];
 
 @NgModule({

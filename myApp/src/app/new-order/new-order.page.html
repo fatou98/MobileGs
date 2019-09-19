@@ -1,68 +1,93 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/order"></ion-back-button>
+      <ion-back-button defaultHref="/home/tabs/clients"></ion-back-button>
     </ion-buttons>
-    <ion-title>Nouvelle commande</ion-title>
-    <ion-buttons slot="primary">
-      <ion-button>
-        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <ion-title>Nouvelle commande prenom client</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <form >
+    <div *ngIf="" text-center>
+      <ion-spinner color="primary"></ion-spinner>
+    </div>
+    <ion-grid *ngIf="!isLoading">
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-img class="image"></ion-img>
+        </ion-col>
+      </ion-row>
+      
+      <ion-item>
+        <ion-label>Client</ion-label>
+        <ion-select placeholder="Selectionnez un client">
+          
+          <ion-select-option value="custom" *ngFor="let custom of customers">{{custom.prenom}} {{custom.nom}} </ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+    </ion-grid><br>
+    
+    <ion-text>Pas d'articles ! créez en au moins un.</ion-text>
     
     <ion-grid>
-      
       <ion-row>
-        
-        <ion-col >
-
-            <ion-item>
-                <ion-label>Client</ion-label>
-                <ion-select placeholder="Selectionnez un client">
-
-                  <ion-select-option value="custom" *ngFor="let custom of customers">{{custom.prenom}} {{custom.nom}} </ion-select-option>
-                </ion-select>
-              </ion-item>
-            
-            <br>
-
+        <ion-col>
           <ion-item>
-            <ion-label position="floating">Type de tissu</ion-label>
-            <ion-input type="text" ></ion-input>
-          </ion-item><br>
-          
-         
-          <ion-button color="tertiary" (click)="selectImage()">Choisir une image</ion-button>
-<br>
-        <ion-item>
-          <ion-label position="floating">Modèle</ion-label>
-          <ion-input type="text" ></ion-input>
-        </ion-item><br>
-        
-      
-          <ion-button color="tertiary" (click)="selectImage()">Choisir une image</ion-button>
-<br>
-        <ion-item>
-          <ion-label position="floating">Prix</ion-label>
-          <ion-input type="number" ></ion-input>
-        </ion-item>
-        <br>
-        <ion-item>
-          <ion-label position="floating">Quantité</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-        <br>
-      </ion-col>
-    </ion-row>
+            <ion-icon name="pricetag" slot="start"></ion-icon>
+            <ion-label>Total: 0 fcfa</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Montant Avance:</ion-label>
+            <ion-input type="number" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Reste à payer:</ion-label>
+            <ion-input type="number" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Date retrait/livraison:</ion-label>
+            <ion-datetime></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
     
-    
-    
-  </ion-grid>
+    <ion-button 
+    expand="block"
+    color="secondary"
+    routerLink="/new-article" >
+    Créer article
+  </ion-button>
   
-</form>
-</ion-content>
+  <ion-button 
+  expand="block"
+  color="tertiary"
+  routerLink="/order" >
+  Enregistrer commande
+  </ion-button>
+  
+  </ion-content>
+
+
+
+
+
+
+
+
+
+
+

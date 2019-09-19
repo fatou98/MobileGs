@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Customer } from '../customer';
+import { Subscription } from 'rxjs';
+import { CustomerService } from '../customer.service';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-customer-detail',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerDetailPage implements OnInit {
 
-  constructor() { }
+  customers: Customer[] = [];
+  isLoading = false;
+  private clientsSub: Subscription;
 
-  ngOnInit() {
+  constructor( private clientsService: CustomerService,
+               private router: Router,
+               private loadingCtrl: LoadingController) { }
+
+    ngOnInit() {
+      this.customers = JSON.parse(localStorage.getItem('customers'));
+    }
+
+
   }
-
-}
