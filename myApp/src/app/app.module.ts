@@ -8,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { Camera } from '@ionic-native/Camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +17,7 @@ import { Camera } from '@ionic-native/Camera/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Camera,
-    File
+    
   ],
   bootstrap: [AppComponent]
 })

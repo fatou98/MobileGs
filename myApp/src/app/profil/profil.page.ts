@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-profil',
@@ -11,5 +12,7 @@ export class ProfilPage implements OnInit {
 
   ngOnInit() {
   }
-
-}
+  auth(form:NgForm)
+{
+  
+}}

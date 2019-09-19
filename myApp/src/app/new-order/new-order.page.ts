@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { File } from '@ionic-native/file/ngx';
 import { Camera, CameraOptions } from '@ionic-native/Camera/ngx';
 import { ActionSheetController } from '@ionic/angular';
+import { Customer } from '../customer';
 @Component({
   selector: 'app-new-order',
   templateUrl: './new-order.page.html',
@@ -14,8 +15,9 @@ export class NewOrderPage implements OnInit {
     private camera: Camera,
     public actionSheetController: ActionSheetController,
     private file: File) { }
-
+customers:Customer[]
   ngOnInit() {
+    this.customers=JSON.parse(localStorage.getItem('customers'))
   }
   
   pickImage(sourceType) {
@@ -28,7 +30,8 @@ export class NewOrderPage implements OnInit {
     }
     this.camera.getPicture(options).then((imageData) => {
     // imageData is either a base64 encoded string or a file URI
-    // If it's base64 (DATA_URL):
+    console.log(imageData);
+    
     // let base64Image = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
     // Handle error

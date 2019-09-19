@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from '../order';
 
 @Component({
   selector: 'app-order',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class OrderPage implements OnInit {
 
   constructor() { }
-orders:any[]
+orders:Order[]=[]
   ngOnInit() {
     this.orders=JSON.parse(localStorage.getItem("orders"))
 

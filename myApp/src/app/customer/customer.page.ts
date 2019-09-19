@@ -11,7 +11,7 @@ import { CustomerService } from '../customer.service';
 })
 export class CustomerPage implements OnInit {
 
-  customers: Customer[];
+  customers: Customer[]=[];
   isLoading = false;
   private clientsSub: Subscription;
 

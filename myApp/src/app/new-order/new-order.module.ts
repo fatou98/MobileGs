@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
+import { Camera } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 import { NewOrderPage } from './new-order.page';
 
 const routes: Routes = [
@@ -21,6 +23,9 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [NewOrderPage]
+  declarations: [NewOrderPage],
+  providers:[
+    Camera,
+    File]
 })
 export class NewOrderPageModule {}
